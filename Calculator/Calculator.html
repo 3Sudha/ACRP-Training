@@ -1,0 +1,146 @@
+<!Doctype HTML>
+<Html>
+<Head>
+<Title> Calculator </Title>
+<style>
+body
+{
+	padding:0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: white;
+}
+
+h1
+{
+	text-align: center;
+}
+
+.container 
+{
+	width: 45% ;
+	height: 60%;
+	padding: 10px;
+	box-shadow: 12px 12px 20px ;
+	text-align: center;
+	background-color: #c7c2b5;
+}
+
+table{
+	margin:auto;
+	
+}
+
+
+input{
+	
+	font-size : 33px;
+	width: auto;
+	
+	
+
+}
+
+button
+{
+	 font-size: 23px;
+	 width: 100px;
+	 height:58px;
+	
+}
+</style>
+
+
+	 
+
+</Head>
+<body>
+   
+        <div class="container">
+		
+		<h1> Calculator</h1>
+		<input type = "text" name= "Scr" id= "Scr">
+         
+       
+	<table>
+	    <tr>
+		    <td><button>C</button></td>
+			<td><button>/</button></td>
+			<td><button>*</button></td>
+			<td><button>&larr;</td>
+			
+		</tr>
+		
+		<tr>
+		    <td><button>7</button></td>
+			<td><button>8</button></td>
+			<td><button>9</button></td>
+			<td><button>-</button></td>
+			
+		</tr>
+		<tr>
+		    <td><button>4</button></td>
+			<td><button>5</button></td>
+			<td><button>6</button></td>
+			<td><button>+</button></td>
+	
+		</tr>
+		<tr>
+		    <td><button>1</button></td>
+			<td><button>2</button></td>
+			<td><button>3</button></td>
+			<td><button>.</button></td>
+			
+		</tr>
+		<tr>
+		   
+			<td><button>(</button></td>
+			<td><button>0</button></td>
+			<td><button>)</button></td>
+			<td><button>=</button></td>
+		</tr>
+		</table>
+		</div>
+		</div>
+		
+		
+	
+
+ </body>
+ <script>
+ let Scr = document.getElementById('Scr');
+buttons = document.querySelectorAll('button');
+let ScrValue = '';
+for(item of buttons)
+{
+	item.addEventListener('click', (e)=>
+	{
+		buttonText = e.target.innerText;
+		console.log('Button text is' , buttonText);
+		if(buttonText =='C')
+		{
+			ScrValue = "";
+			Scr.value = ScrValue;
+		}
+		
+		else if(buttonText == '=')
+		{
+			Scr.value = eval(ScrValue);
+		}
+		
+		else
+		{
+			ScrValue += buttonText;
+			Scr.value = ScrValue; 
+		}
+	
+	})
+	
+	
+}
+ </script>
+ </html>
+  

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration Form</title>
+     
+<style>
+body
+{
+	padding:0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: white;
+}
+
+h1
+{
+	text-align: center;
+}
+
+.container 
+{
+	width: 45% ;
+	height: 60%;
+	padding: 10px;
+	box-shadow: 12px 12px 20px ;
+	text-align: center;
+	background-color: #c7c2b5;
+}
+input{
+	
+	font-size : 15px;
+	width: auto;
+}
+
+</style>	
+</head>
+<body> 
+        
+	<div class="container">
+        <h1> REGISTRATION FORM</h1>
+                
+<form id = "form" onsubmit= "myfun()">
+
+        <label for="First Name">First Name:</label>
+        <input type="text" placeholder="Enter First name" name="fname" id="fname" required>
+		<br>
+		<br>
+     
+        
+        <label for="Last Name">Last Name:</label>
+        <input type="text" placeholder="Enter Last name" name="lname" id="lname" required >
+		<br>
+        <br>
+		
+		<label for="email">Email:</label>
+        <input type="email" placeholder="Enter email" name="email" id="email" required>
+		<br>
+        <br>
+	
+        <label for= "Gender">Gender </label><br>
+	   <input type = "radio" id = "male" value = "male" Name = "Gender"> Male
+	   <input type = "radio" id = "female" value = "female" Name = "Gender"> Female
+	   <input type = "radio" id = "others" value = "other"  Name = "Gender"> Others
+	    <br>
+	    <br>
+       
+       
+        <label for="Date Of Birth">Date of Birth:</label>
+        <input type="date"  placeholder="Enter Dob" name="dob" id="dob" required>
+		<br>
+        <br>
+         
+          
+        <label for="Age">Age:</label>
+        <input type="text" placeholder="Enter Age" name="age" id="age" required>
+		<br>
+        <br>
+          
+              
+        <label for="Phone">Phone Number:</label>
+        <input type="text"  placeholder="Enter Phone Number" name="phone" id="phone" required>
+		<br>
+        <br>
+		
+		
+		<label for="Address">Address: </label>
+		
+		<textarea name="Address" rows="4" cols="20" Placeholder = "Enter Address" id = "Address" required></textarea>
+		<br>
+        <br>
+           
+            
+        <label for="Pincode">Pincode:</label>
+        <input type="text"  placeholder="Enter Pincode" name="pincode" id="pincode" required>
+		<br>
+        <br>
+          
+            
+        <label for="State">State:</label>
+        <input type="text"  placeholder="Enter State" name="state" id="state" required>
+		<br>
+        <br>
+          
+      
+        <label for="Last Name">District:</label>
+        <input type="text" class="form-control" placeholder="Enter District" name="district" id="district" required>
+		<br>
+        <br>
+		
+		<input class="form-check-input" type="checkbox" required> Remember me
+		<br>
+		<br>
+		<input button type="submit"></button>
+</form>
+<script>
+	function myname(){
+	if(document.getElementById("male").checked)
+ {
+ document.write("male");
+ }
+ else if(document.getElementById("female").checked)
+ {
+ document.write("female");
+ }
+ else{
+ document.write("other");
+ }
+}
+</script>
+<script>
+    function myfun()
+	{
+	 var fname = document.getElementById("fname").value;
+	 var lname = document.getElementById("lname").value;
+	 var email = document.getElementById("email").value;
+	 var dob = document.getElementById("dob").value;
+	 var age = document.getElementById("age").value;
+	 var phone = document.getElementById("phone").value;
+	 var Address = document.getElementById("Address").value;
+	 var pincode = document.getElementById("pincode").value;
+	 var state = document.getElementById("state").value;
+	 var district = document.getElementById("district").value;
+	 
+	 
+	 document.write("Registration Form Information <br> <br>" + "First Name: " +fname+"<br>");
+	 document.write("<br>Last Name: " +lname+"<br>");
+	 document.write("<br>Email: " +email+"<br>");
+	 document.write("<br>Date of Birth: " +dob+"<br>");
+	 document.write("<br>Age: " +age+"<br>");
+	 document.write("<br>Phone: " +phone+"<br>");
+	 document.write("<br>Address: " +Address+"<br>");
+	 document.write("<br>Pincode: " +pincode+"<br>");
+	 document.write("<br>State: " +state+"<br>");
+	 document.write("<br>District: " +district+"<br>");
+	 
+	 }
+	
+		</script>
+	
+	
+</script>
+</body>
+</html>
+        
+        

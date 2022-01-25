@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> STUDENT REGISTERATION FORM </title>
+
+<style>
+body
+{
+	padding:0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: white;
+}
+
+
+#form
+{
+    width: 65% ;
+	height: 60%;
+	padding: 10px;
+	box-shadow: 12px 12px 20px ;
+	text-align: center;
+	background-color: #c7c2b5;
+}
+
+
+
+#show th, #show td
+{
+    padding: 13px;
+    background-color: #c7c2b5;
+}
+
+
+
+#btn td input
+{
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+
+a:link, a:visited {
+  background-color: black;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+a:hover, a:active {
+  background-color: #555555;
+}
+
+
+</style>
+</head>
+<body>
+
+<form id="sForm">
+<center>
+<table border="4" id="form" cellpadding="5%" cellspacing="5">
+<thead>
+
+<tr>
+<td colspan="2"> <center> <font size=8> <b>STUDENT REGISTERATION FORM </b> </font> </center> </td>
+</tr>
+
+<tr>
+<th>First Name</th>
+<td><input type="text" name="sname" id="f_name" size="30" placeholder="Fname" required></td>
+</tr>
+
+<tr>
+<th>Last Name</th>
+<td><input type="text" name="sname" id="l_name" size="30" placeholder="Lname" required></td>
+</tr>
+
+<th>Student_id</th>
+<td><input type="number" name="std_id" id="std_id" size="30" placeholder="Student_id" required></td>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<th>Father Name</th>
+<td><input type="text" name="fname" id="fname" size="30" placeholder="Father name" required></td>
+</tr>
+<tr>
+<th>Mother Name</th>
+<td><input type="text" name="mname" id="mname" size="30" placeholder="Mother name" required></td>
+</tr>
+<tr>
+<th>Email</th>
+<td><input type="email" name="email" id="email" size="30" placeholder="Email" required></td>
+</tr>
+
+<tr>
+<th> Phone Number </th>
+<td> <input type="Phone" placeholder="10-digit numbers" name="phone1" id="phone1" size="30" required> </td>
+
+</tr>
+<tr>
+<th> Gender </th>
+<td>
+<input type="radio" name="gender" id="gender_Male" value="Male" />male
+<input type="radio" name="gender" id="gender_Female" value="Female" />female
+<input type="radio" name="gender" id="gender_Other" value="Other" />other
+
+</td>
+</tr>
+
+<tr>
+<th> Date Of Birth</th>
+<td> <input type="date" name="dob" id="dob" placeholder="DD - MM - YY" size="30" required> </td>
+
+
+<tr>
+<th>Address</th>
+<td><textarea type="text" rows="5" cols="35" name="address" id="address" placeholder="Enter address" required> </textarea></td>
+</tr>
+
+<tr id="btn" >
+<td colspan="2" >
+<input type="reset" name="reset" value= "RESET " onclick="rst()"/>
+<input type="button" name="submit" id="submit" value="SUBMIT" onclick="oncall()"></td>
+</tr>
+
+
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+
+<a href = "Portal.html">
+<input type="button" name="Back Button" value="Back button">
+</a>
+
+
+
+
+<!--- The Student Details in the Tabular Form---->
+
+<h1> Student Details </h1>
+<table border="4" id="show">
+<thead>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>Student_id</th>
+<th>Father Name</th>
+<th>Mother Name</th>
+<th>Email</th>
+<th>Phone Number</th>
+<th>Date Of Birth</th>
+<th>Address</th>
+<th>Gender</th>
+</tr>
+</thead>
+</table>
+</center>
+
+</form>
+
+<script>
+function rst(){
+document.getElementById("sForm").reset();
+}
+</script>
+
+<script>
+function validate(){
+if(document.getElementById('gender_Male').checked) {
+
+
+var gd = document.getElementById("gender_Male").value;
+
+return gd;
+
+
+
+}else if(document.getElementById('gender_Female').checked) {
+
+var gd1 = document.getElementById("gender_Female").value;
+return gd1;
+}
+else{
+var gd2 = document.getElementById("gender_Other").value;
+return gd2;
+}
+}
+
+
+
+function oncall(){
+
+RowValue();
+validate();
+}
+</script>
+
+<script>
+
+var list1 = [];
+var list2 = [];
+var list3 = [];
+var list4 = [];
+var list5 = [];
+var list6 = [];
+var list7 = [];
+var list8 = [];
+var list9 = [];
+var list10 = [];
+
+
+
+var n = 1;
+var x = 0;
+
+
+
+function RowValue(){
+
+
+
+var AddRown = document.getElementById('show');
+var NewRow = AddRown.insertRow(n);
+
+
+
+list1[x] = document.getElementById("f_name").value;
+list2[x] = document.getElementById("l_name").value;
+list3[x] = document.getElementById("std_id").value;
+list4[x] = document.getElementById("fname").value;
+list5[x] = document.getElementById("mname").value;
+list6[x] = document.getElementById("email").value;
+list7[x] = document.getElementById("phone1").value;
+list8[x] = document.getElementById("dob").value;
+list9[x] = document.getElementById("address").value;
+list10[x] = validate();
+
+
+
+
+
+
+var cel1 = NewRow.insertCell(0);
+var cel2 = NewRow.insertCell(1);
+var cel3 = NewRow.insertCell(2);
+var cel4 = NewRow.insertCell(3);
+var cel5 = NewRow.insertCell(4);
+var cel6 = NewRow.insertCell(5);
+var cel7 = NewRow.insertCell(6);
+var cel8 = NewRow.insertCell(7);
+var cel9 = NewRow.insertCell(8);
+var cel10 = NewRow.insertCell(9);
+
+
+
+cel1.innerHTML = list1[x];
+cel2.innerHTML = list2[x];
+cel3.innerHTML = list3[x];
+cel4.innerHTML = list4[x];
+cel5.innerHTML = list5[x];
+cel6.innerHTML = list6[x];
+cel7.innerHTML = list7[x];
+cel8.innerHTML = list8[x];
+cel9.innerHTML = list9[x];
+cel10.innerHTML = list10[x];
+
+
+
+n++;
+x++;
+}
+
+
+
+</script>
+
+</body>
+</html>

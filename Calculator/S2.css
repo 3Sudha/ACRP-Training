@@ -1,0 +1,51 @@
+body
+{
+	padding:0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: white;
+}
+
+h1
+{
+	text-align: center;
+}
+
+.container 
+{
+	width: 45% ;
+	height: 60%;
+	padding: 10px;
+	box-shadow: 12px 12px 20px ;
+	text-align: center;
+	background-color: #c7c2b5;
+}
+
+table{
+	margin:auto;
+	
+}
+
+
+input{
+	
+	font-size : 33px;
+	width: auto;
+	
+	
+
+}
+
+button
+{
+	 font-size: 23px;
+	 width: 100px;
+	 height:58px;
+	
+}
+
+
+	 

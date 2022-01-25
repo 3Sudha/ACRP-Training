@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> COURSE FORM </title>
+
+<style>
+body
+{
+	padding:0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: white;
+}
+
+
+#form{
+
+    width: 65% ;
+	height: 60%;
+	padding: 10px;
+	box-shadow: 12px 12px 20px ;
+	text-align: center;
+	background-color: #c7c2b5;
+}
+
+
+#show th, #show td{
+padding: 13px;
+background-color: #c7c2b5;
+}
+
+
+a:link, a:visited {
+  background-color: black;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+a:hover, a:active {
+  background-color: #555555;
+}
+
+</style>
+</head>
+<body>
+
+<form id="sForm">
+<center>
+<table border="4" id="form" cellpadding="5%" cellspacing="5">
+<thead>
+
+<tr>
+<td colspan="2"> <center> <font size=8> <b>Course Form </b> </font> </center> </td>
+</tr>
+
+<tr>
+<th>Student_id</th>
+<td><input type="number" name="std_id" id="std_id" size="30" placeholder="Student Id" required></td>
+</tr>
+
+<tr>
+<th>Course_id</th>
+<td><input type="number" name="crs_id" id="crs_id" size="30" placeholder="Course Id" required></td>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<th>Course_name</th>
+<td><input type="text" name="crs_name" id="crs_name" size="30" placeholder="Course name" required></td>
+</tr>
+<tr>
+<th>Fees</th>
+<td><input type="Number" name="fees" id="fees" size="30" placeholder="Fees" required></td>
+</tr>
+<tr>
+<th>Registration Date</th>
+<td><input type="Date" name="Rgr_date" id="Rgr_date" size="30" placeholder="DD - MM - YY" required></td>
+</tr>
+
+<tr>
+<th> Class start Date </th>
+<td> <input type="Date" placeholder="DD - MM - YY" name="Cls_str_date" id="Cls_str_date" size="30" required> </td>
+</tr>
+
+<tr id="btn" >
+<td colspan="2" >
+<input type="reset" name="reset" value= "RESET " onclick="rst()"/>
+<input type="button" name="submit" id="submit" value="SUBMIT" onclick="RowValue()"></td>
+</tr>
+
+
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<a href = "Portal.html">
+<input type="button" name="Back Button" value="Back button">
+</a>
+
+
+<!--- The Course Details in the Tabular Form---->
+
+
+
+<h1> Course Details </h1>
+<table border="4" id="show">
+<thead>
+<tr>
+<th>Student_id</th>
+<th>Course_id</th>
+<th>Course_name</th>
+<th>Fees</th>
+<th>Registration Date</th>
+<th>Class Start Date</th>
+
+</tr>
+</thead>
+</table>
+</center>
+
+</form>
+
+<script>
+function rst(){
+document.getElementById("sForm").reset();
+}
+</script>
+
+
+
+<script>
+
+var list1 = [];
+var list2 = [];
+var list3 = [];
+var list4 = [];
+var list5 = [];
+var list6 = [];
+
+
+
+var n = 1;
+var x = 0;
+
+
+
+function RowValue(){
+
+
+
+var AddRown = document.getElementById('show');
+var NewRow = AddRown.insertRow(n);
+
+
+
+list1[x] = document.getElementById("std_id").value;
+list2[x] = document.getElementById("crs_id").value;
+list3[x] = document.getElementById("crs_name").value;
+list4[x] = document.getElementById("fees").value;
+list5[x] = document.getElementById("Rgr_date").value;
+list6[x] = document.getElementById("Cls_str_date").value;
+
+
+
+
+
+
+var cel1 = NewRow.insertCell(0);
+var cel2 = NewRow.insertCell(1);
+var cel3 = NewRow.insertCell(2);
+var cel4 = NewRow.insertCell(3);
+var cel5 = NewRow.insertCell(4);
+var cel6 = NewRow.insertCell(5);
+
+
+
+cel1.innerHTML = list1[x];
+cel2.innerHTML = list2[x];
+cel3.innerHTML = list3[x];
+cel4.innerHTML = list4[x];
+cel5.innerHTML = list5[x];
+cel6.innerHTML = list6[x];
+
+
+
+
+n++;
+x++;
+}
+
+
+
+</script>
+
+
+</body>
+</html>
